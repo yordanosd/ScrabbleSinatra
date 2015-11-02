@@ -12,6 +12,8 @@ You'll be working on this assignment as an individual.
 - Switch to the branch you created above.  
 
 ## Baseline
+**Work together to accomplish this baseline**
+
 This project...
 - needs a Gemfile so others are aware of its dependencies
 - needs a `config.ru` file; look at last week's for an example
