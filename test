@@ -1,0 +1,29 @@
+post '/score' do
+  # @word = user["user_word"]
+  # @word_score = Scrabble::Scoring.score(@word)
+  erb :score
+end
+
+# post '/score' do
+#   @words = []
+#   # user.values.each do |word|
+#     word = user["user_word"]
+#     word_score = Scrabble::Scoring.score(word)
+#     @words << ["#{word}", word_score]
+#   # end
+# end
+
+
+<!-- <% if @word %> -->
+<!-- <% if (!empty($_REQUEST['submit']) %>
+  <h1>
+    Word: <%= @word %> <br>
+    Score: <%= @word_score %>
+  </h1>
+
+<% end %> -->
+
+
+<!-- <div class"params">
+  <%= params %>
+</div> -->

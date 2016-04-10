@@ -1,0 +1,86 @@
+<% @test=["home","score"] %>
+
+<table>
+  <th></th>
+
+  <% @test.each do |word| %>
+
+    <tr>
+      <td class="row">
+
+      <% word.each_char do |char| %>
+      <% @letter_score = Scrabble::Scoring.char_score(char)%>
+      <section class = "tile">
+        <span class="letter"><%= char.upcase %></span>
+        <span class="letter_score"><%= @letter_score %></span>
+      </section>
+      <% end %>
+      </td>
+      <!-- <td class="score">
+        score:
+      </td> -->
+    <tr>
+  <% end %>
+
+</table>
+
+
+<!-- <% @test=["home","score"] %>
+
+<table>
+  <th></th>
+
+  <% @test.each do |word| %>
+
+    <tr>
+      <td class="row">
+
+      <% word.each_char do |char| %>
+      <% letter_score = Scrabble::Scoring.char_score(char)%>
+      <section class = "tile">
+        <span class="letter"><%= char.upcase %></span>
+        <span class="letter_score"><%= letter_score %></span>
+      </section>
+      <% end %>
+      </td>
+      <td>
+      </td>
+    <tr>
+  <% end %>
+
+</table> -->
+
+
+
+
+
+<!-- <ul>
+  <% @test.each do |word| %>
+
+      <li class="letter">
+      <% word.each_char do |char| %>
+        <%= char.upcase %>
+      <% end %>
+    </li>
+  <% end %>
+
+</ul> -->
+
+
+<!--
+
+<% @test="home" %>
+
+<table>
+  <th></th>
+  <tr>
+    <td>
+    <% @test.each_char do |char| %>
+      <%= char %>
+    <% end %>
+    </td>
+    <td>
+      score:
+    </td>
+  <tr>
+</table> -->
