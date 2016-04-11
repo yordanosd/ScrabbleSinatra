@@ -16,7 +16,6 @@
     <% end %>
   </table>
 </section>
-<section class="side_image"></section>
 
 <section class="form">
 <form action="" method="post" acet-charset="utf-8">
@@ -25,15 +24,21 @@
   <input type="submit"  value="" name="submit" id="submit">
 </form>
 
-<% if @word %>
+<form action="" method="post" acet-charset="utf-8">
+  <label for="reset"></label>
+  <input type="submit"  value="" name="reset" id="reset">
+</form>
+
+<% if @word_score_list %>
   <table>
+    <% @word_score_list.each do |word| %>
       <tr>
         <td class="score_tile">
-          <span class="total_score"><%= @score %></span>
+          <span class="total_score"><%= word[1] %></span>
           <span class="score_word">score</span>
         </td>
         <td>
-          <% @word.each_char do |char| %>
+          <% word[0].each_char do |char| %>
             <% letter_score = Scrabble::Scoring.char_score(char)%>
             <section class = "tile">
               <span class="letter"><%= char.upcase %></span>
@@ -42,7 +47,7 @@
           <% end %>
         </td>
       <tr>
+    <% end %>
   </table>
 <% end %>
-
 </section>
