@@ -39,7 +39,7 @@ class ScrabbleSinatra < Sinatra::Base
 
       @word_score_list = CSV.read(FILE).reverse!
 
-    elsif params["reset"] == "reset"
+    elsif params["reset"] == ""
       File.truncate(FILE, 0)
     end
 
